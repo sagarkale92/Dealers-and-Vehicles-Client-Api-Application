@@ -1,6 +1,7 @@
 package cox.automotive;
 
-import io.swagger.client.*;
+import io.swagger.client.ApiClient;
+import io.swagger.client.ApiException;
 import io.swagger.client.api.DataSetApi;
 import io.swagger.client.api.VehiclesApi;
 import io.swagger.client.api.DealersApi;
@@ -26,9 +27,11 @@ public class ClientApiApplication {
 
     public static void main(String[] args) {
         
-        DataSetApi dataSetApiInstance = new DataSetApi();
-        vehiclesApiInstance = new VehiclesApi();
-        dealersApiInstance = new DealersApi();
+    	ApiClient apiClient = new ApiClient();
+        apiClient.setBasePath("http://api.coxauto-interview.com/");
+        DataSetApi dataSetApiInstance = new DataSetApi(apiClient);
+        vehiclesApiInstance = new VehiclesApi(apiClient);
+        dealersApiInstance = new DealersApi(apiClient);
         Answer answer = new Answer();
         try {
             String dataSetId = dataSetApiInstance.getDataSetId().getDatasetId();
