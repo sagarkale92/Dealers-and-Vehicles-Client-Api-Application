@@ -1,9 +1,6 @@
 package cox.automotive;
 
 import io.swagger.client.*;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.model.*;
-//import io.swagger.client.api.ClientApi;
 import io.swagger.client.api.DataSetApi;
 import io.swagger.client.api.VehiclesApi;
 import io.swagger.client.api.DealersApi;
@@ -15,8 +12,6 @@ import io.swagger.client.model.VehicleResponse;
 import io.swagger.client.model.DealerAnswer;
 import io.swagger.client.model.DealersResponse;
 
-//import java.io.File;
-//import java.util.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
