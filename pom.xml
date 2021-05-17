@@ -4,6 +4,14 @@
   <artifactId>dealers-vehicles-client-app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  
+  <repositories>
+    <repository>
+        <id>project-repository</id>
+        <url>file://${project.basedir}/repository</url>
+    </repository>
+  </repositories>
+  
   <dependencies>
   	<dependency>
   		<groupId>io.swagger</groupId>
@@ -11,5 +19,10 @@
   		<version>1.0.0</version>
   		<scope>compile</scope>
   	</dependency>
+  	<dependency>
+	    <groupId>org.codehaus.mojo</groupId>
+	    <artifactId>exec-maven-plugin</artifactId>
+	    <version>3.0.0</version>
+	</dependency>
   </dependencies>
 </project>
